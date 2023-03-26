@@ -1,6 +1,33 @@
 # 김광현  
 # 23-React1  
+## 23.03.23 4주차  
 
+#### 프로젝트 ReSetting  
+ㆍ README.md 백업  
+ㆍ 23-React1 폴더 삭제  
+ㆍ 새 프로젝트 생성 (23-React1)  
+ㆍ Github repo 삭제  
+ㆍ README.MD 덮어씌우기  
+ㆍ 새로 만든 23-React1 을 push  
+
+
+***JSX란?***  
+`Javascript`에 `XML`을 추가한 확장 문법.  
+
+***JS의 역할?***  
+`JSX`는 내부적으로 `XML` / `HTML` 코드를 `Javascript`로 변환.  
+`React`가 **createElement**  함수를 사용하여 자동으로 `Javascript`로 변환.  
+만약 JS작업할 경우 직접 **createElement** 함수를 사용해야함.  
+  
+***장점***  
+1. 코드가 간결해 짐.  
+2. 가독성이 향상 됨.  
+3. `Injection Attack` 이라 불리는 해킹 방법을 방어함으로써 보안에 강함.  
+  
+***사용법***
+1. 모든 `Javascript` 문법을 지원함.  
+2. `Javascript` 문법에 `XML` 과 `HTML`을 섞어서 사용함.  
+3. 만일 `HTML` 이나 `XML` 에 `Javascript` 코드를 사용하고 싶으면 { } 괄호를 사용함.  
 ## 23.03.16 3주차
   
 ***React란?***  
