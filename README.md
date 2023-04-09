@@ -1,6 +1,35 @@
 # 김광현  
 # 23-React1  
   
+## 23.04.06 6주차  
+***컴포넌트 추출***  
+ㆍ복잡한 컴포넌트를 쪼개서 **여러개의 컴포넌트**로 나눌수 있음  
+ㆍ큰 컴포넌트에서 **일부를 추출**해서 **새로운 컴포넌트**를 만드는 것  
+ㆍ실무에서는 **처음부터 1개의 컴포넌트**에 **하나의 기능**만 사용하도록 설계하는 것이 좋음  
+  
+
+***State란?***  
+ㆍ`State`는 리액트 컴포넌트의 **상태**를 의미  
+ㆍ**상태**의 의미는 정상인지 비정상인지가 아닌 **컴포넌트의 데이터**를 의미  
+ㆍ정확히는 컴포넌트의 **변경가능한 데이터**를 의미함  
+ㆍ`State`가 변하면 **다시 렌더링**되기에 렌더링과 관련된 값만 `State`에 **포함**시켜야함  
+  
+***State의 특징***  
+ㆍ**리액트**만의 특별한 형태가 아닌 단지 `JS 객체`일 뿐  
+ㆍ컴포넌트의 종류에 따라  **형태**가 변함  
+`함수형` -> **useState()  
+`클래스형` -> **this.state  
+ㆍ`state`는 변경은 가능하다고 명시되지만, 직접 수정하면 **안됨**  
+ㆍ변경하고자 할때는 `setstate()`함수를 사용  
+  
+***생명 주기***  
+ㆍ컴포넌트의 **생명 시점, 사용 시점, 종료 시점**을 나타냄  
+ㆍ`constructor`가 실행 되면서 컴포넌트가 **생성**  
+ㆍ생성 직후 `componentDidMount()` 함수가 **호출**  
+ㆍ컴포넌트가 **소멸하기 전**까지 여러번 **렌더링**함  
+ㆍ렌더링은 `props`, `setState()`, `forceUpdate()`에 의해 **상태가 변경**되면 이루어짐  
+ㆍ렌더링이 종료시 `componentDinUpdate()`함수가 **호출**  
+ㆍ마지막으로 컴포넌트가 **언마운트**될시 `componentWillUnmount()`함수가 **호출**
 ## 23.03.30 5주차  
   
 ***엘리먼트란?***  
@@ -56,7 +85,7 @@ Ex) 컴포넌트 `Button`, 속성 `color` 등등
   2. 함수형 컴포넌트  
     ㆍWelcome컴포넌트는 props를 받아, 받은 props중 name키의 값은 "안녕", 뒤에 넣어 반환  
 
-```
+``` jsx
      function Welcome(props) {
        return <h1>안녕, {props.name}</h1>;
      }
@@ -64,7 +93,7 @@ Ex) 컴포넌트 `Button`, 속성 `color` 등등
   
   3. 클래스형 컴포넌트  
     ㆍWelcome컴포넌트는 React, Component class로 부터 상속 받아 선언  
-```
+``` jsx
 class Welcome extends React.Component{
     render() {
         return <h1>안녕, {this.props.name}</h1>;
@@ -77,7 +106,7 @@ class Welcome extends React.Component{
     ㆍ왜냐면 리액트는 소문자로 시작하는 컴포는트를 **DOM 태그로 인식**하기 때문  
     
   5. 컴포넌트의 렌더링  
-```
+``` jsx
 function Welcome(props){
     return <h1>안녕, {props.name}</h1>;
 }
@@ -142,7 +171,7 @@ ReactDOM.render(
 ## JSON  
 기본적으로 key - value로 이루어져있다.  
 
-```
+``` jsx
 {  
   "location" : "동안구 임곡로 46",  
   "phone" : "010-0000-0000"  
